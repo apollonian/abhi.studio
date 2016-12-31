@@ -8,7 +8,7 @@ To put it in simple terms: I’ve been wanting to have a blog since very *very* 
 ## The Struggle
 The blog is powered by Jekyll which I had a hard time setting up on Bash in Windows, so reserving a future post for the same. This pretty much explains what I went through(except the fact that I managed to pull it off): 
 
-![](../public/images/thestruggle.gif)
+![](../public/thestruggle.gif)
 
 ## The Motive
 The prime motive behind this venture is to document the process of learning and exploring. Expect it to include ideas and opinions on design(typography and prototyping), machine learning(musings about my university project) and programming in general.
@@ -23,4 +23,4 @@ Here are some reads to begin the year with:
  - [It’s Okay to be Dumb](https://dust.bff.co/its-okay-to-be-dumb-d536915238cd#.tq5f90pm6)  
  - [Be Kind](http://briangilham.com/blog/2016/10/10/be-kind) 
 
-![](../public/images/thewish.gif) 
+![](../public/thewish.gif) 
