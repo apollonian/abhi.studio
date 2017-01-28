@@ -9,12 +9,12 @@ kramdown:
 title:            Highlight
 tagline:          'Blog of Abhishek Warokar'
 description:      ''
-url:              http://apollonian11.github.io/highlight
+url:              http://apollonian11.github.io
 baseurl:          /
 
 author:
   name:           'Abhishek Warokar'
-  url:            http://apollonian11.github.io/highlight
+  url:            http://apollonian11.github.io
 
 gems:
  - jekyll-paginate
