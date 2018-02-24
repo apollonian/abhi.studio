@@ -1,37 +1,111 @@
----
-layout: default
-title: Home
----
+﻿<!DOCTYPE html>
+<html lang="en">
 
-<div class="posts">
-  {% for post in paginator.posts %}
-  <div class="post">
-    <h1 class="post-title">
-      <a href="{{ post.url }}">
-        {{ post.title }}
-      </a>
-    </h1>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Abhishek Warokar &bull; Thinker, Designer &amp; Developer ✌</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=9">
+    <meta http-equiv="content-language" content="en">
+    <meta name="robots" content="noindex">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Libre+Franklin:400" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:400,500" rel="stylesheet">
+    <script src="https://use.typekit.net/jhm8ldf.js"></script>
+    <script>
+        try {
+            Typekit.load({
+                async: true
+            });
+        } catch (e) {}
+    </script>
+</head>
 
-    <span class="post-date">{{ post.date | date_to_string }}</span>
+<body>
+    <div class="main">
+        <div class="left">
+            <div class="left-content">
+                <div class="top label">
+                    <span id="name"><a href="http://abhi.design" title="Hello! <*-*>">ABHISHEK WAROKAR</a></span>
+                </div>
+                <div class="middle">
+                    <p class="elevator tk-acta-display">
+                        Abhishek is a self&dash;taught designer &amp; developer who crafts aesthetic and meaningful experiences for digital world.
+                        Read his <a href="https://apollonian11.github.io" target="_blank">articles</a>, follow him on
+                        <a href="https://www.dribbble.com/apollonian" target="_blank">Dribbble</a> and
+                        <a href="https://www.github.com/apollonian11" target="_blank">GitHub</a>, or just say
+                        <a href="mailto:hi@abhi.design?subject=Hola Abhi!&body=[Let your ideas flow...]">hello</a>.
+                    </p>
+                </div>
+                <div class="bottom">
+                    <div class="work">
+                        <div class="info">
+                            <p class="caption">A front-end development playground built in Electron. <a href="https://thecodepad.github.io"
+                                    target="_blank">View the website.</a></p>
+                            <h3 class="label"><span><a href="https://thecodepad.github.io" target="_blank">CodePad</a></span></h3>
+                        </div>
+                        <div class="info">
+                            <p class="caption">A nimble dictionary app concept with quick search. <span style="color: #909294">Case study coming soon.</span></p>
+                            <h3 class="label"><span style="cursor: default;">Dictio</span></h3>
 
-    {{ post.content }}
-  </div>
-  {% endfor %}
-</div>
+                        </div>
+                        <div class="info">
+                            <p class="caption">A handpicked collection of font &amp; color combinations. <a href="https://typechem.github.io"
+                                    target="_blank">View the website.</a></p>
+                            <h3 class="label"><span><a href="https://typechem.github.io" target="_blank">Typechem</a></span></h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <div class="right-content">
+                <img class="slide" src="img/dictio.jpg">
+                <img class="slide" src="img/typechem.jpg">
+                <img class="slide" src="img/codepad.png">
+            </div>
+        </div>
+    </div>
+    <script>
+        var myIndex = 0;
+        slider();
 
-<div class="pagination">
-  {% if paginator.next_page %}
-    <a class="pagination-item older" href="{{ site.baseurl }}page{{paginator.next_page}}">Older</a>
-  {% else %}
-    <span class="pagination-item older">Older</span>
-  {% endif %}
-  {% if paginator.previous_page %}
-    {% if paginator.page == 2 %}
-      <a class="pagination-item newer" href="{{ site.baseurl }}">Newer</a>
-    {% else %}
-      <a class="pagination-item newer" href="{{ site.baseurl }}page{{paginator.previous_page}}">Newer</a>
-    {% endif %}
-  {% else %}
-    <span class="pagination-item newer">Newer</span>
-  {% endif %}
-</div>
+        function slider() {
+            var i;
+            var x = document.getElementsByClassName("slide");
+            var r = document.getElementsByClassName("right");
+            var gra = ["linear-gradient(-45deg, #c1dfc4 0%, #deecdd 100%)",
+                "linear-gradient(-45deg, #dad4ec 0%, #dad4ec 1%, #f3e7e9 100%)",
+                "linear-gradient(-45deg, #93a5cf 0%, #e4efe9 100%)"
+            ]
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            myIndex++;
+            if (myIndex > x.length) {
+                myIndex = 1
+            }
+            x[myIndex - 1].style.display = "block";
+            r[0].style.backgroundImage = gra[myIndex - 1];
+            setTimeout(slider, 2500);
+        }
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-90636414-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+    </div>
+</body>
+
+</html>
